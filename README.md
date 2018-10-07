@@ -1,4 +1,4 @@
-# kubeplay
+# kubesim_elte
 
 Kubernetes Playground
 
