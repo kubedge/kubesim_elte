@@ -1,13 +1,13 @@
-# Default values for helloworld-chart.
+# Default values for kubesim-elte chart.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 replicaCount: 1
 image:
-  repository: jbrette/kubesim_elte-amd64
+  repository: hack4easy/kubesim_elte-amd64
   tag: 0.1.0
   pullPolicy: IfNotPresent
 service:
-  name: kubesim_elte
+  name: kubesim-elte
   type: NodePort
   externalPort: 8005
   internalPort: 8080
