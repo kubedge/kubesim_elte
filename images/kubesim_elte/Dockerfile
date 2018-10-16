@@ -1,5 +1,5 @@
 FROM scratch
 ADD kubesim_elte/ca-certificates.crt /etc/ssl/certs/
-ADD kubesim_elte/goserv /goserv
+ADD kubesim_elte/goclient /goclient
 EXPOSE 8080
-CMD ["/goserv"]
+CMD ["/goclient"]
