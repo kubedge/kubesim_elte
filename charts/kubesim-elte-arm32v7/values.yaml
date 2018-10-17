@@ -4,7 +4,7 @@
 replicaCount: 1
 nameOverride: kubesim-elte
 nodeSelector:
-  kubedgeNodeType: ran
+  kubedgeNodeType: elte-ran
 image:
   repository: hack4easy/kubesim_elte-arm32v7
   tag: latest
