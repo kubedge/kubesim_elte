@@ -2,6 +2,10 @@
 
 KUDEDGE Platform eLTE Simulator
 
+## KUBEDGE Platform
+
+Documentation is available [Here](http://kubedge.cloud) or [Here](https://kubedge.github.io)
+
 ## Main tutorials
 
 - Docker image creation.
