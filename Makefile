@@ -1,7 +1,7 @@
 
 # Image URL to use all building/pushing image targets
-COMPONENT        ?= kubesim_elte
-VERSION_V1       ?= 0.1.20
+COMPONENT        ?= kubesim_5gc
+VERSION_V1       ?= 0.1.23
 DHUBREPO_DEV     ?= hack4easy/${COMPONENT}-dev
 DHUBREPO_AMD64   ?= hack4easy/${COMPONENT}-amd64
 DHUBREPO_ARM32V7 ?= hack4easy/${COMPONENT}-arm32v7
@@ -78,16 +78,16 @@ docker-push-arm64v8:
 install: install-dev
 
 install-dev: docker-build-dev
-	helm install --name kubesim-elte charts/kubesim-elte-dev --set images.tags.operator=${IMG_DEV} --namespace ${K8S_NAMESPACE}
+	helm install --name kubesim-5gc charts/kubesim-5gc-dev --set images.tags.operator=${IMG_DEV} --namespace ${K8S_NAMESPACE}
 
 install-amd64:
-	helm install --name kubesim-elte charts/kubesim-elte-amd64 --set images.tags.operator=${IMG_AMD64},images.pull_policy=Always --namespace ${K8S_NAMESPACE}
+	helm install --name kubesim-5gc charts/kubesim-5gc-amd64 --set images.tags.operator=${IMG_AMD64},images.pull_policy=Always --namespace ${K8S_NAMESPACE}
 
 install-arm32v7:
-	helm install --name kubesim-elte charts/kubesim-elte-arm32v7 --set images.tags.operator=${IMG_ARM32V7},images.pull_policy=Always --namespace ${K8S_NAMESPACE}
+	helm install --name kubesim-5gc charts/kubesim-5gc-arm32v7 --set images.tags.operator=${IMG_ARM32V7},images.pull_policy=Always --namespace ${K8S_NAMESPACE}
 
 install-arm64v8:
-	helm install --name kubesim-elte charts/kubesim-elte-arm64v8 --set images.tags.operator=${IMG_ARM64V8},images.pull_policy=Always --namespace ${K8S_NAMESPACE}
+	helm install --name kubesim-5gc charts/kubesim-5gc-arm64v8 --set images.tags.operator=${IMG_ARM64V8},images.pull_policy=Always --namespace ${K8S_NAMESPACE}
 
 purge: setup
-	helm delete --purge kubesim-elte
+	helm delete --purge kubesim-5gc
