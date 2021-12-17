@@ -1,4 +1,4 @@
-module github.com/kubedge/kubesim_5gc
+module github.com/kubedge/kubesim_elte
 
 go 1.17
 
