@@ -1,0 +1,9 @@
+# This repo has no Python of its own. Every .py file here is delivered by
+# claude-meta (class M), targets Python 3.14 and runs under `uv run --script`,
+# so the project's ruff hook leaves it alone rather than rewriting it.
+extend-exclude = [
+  ".agents",
+  ".claude",
+  "plugins",
+  "bin/*.py",
+]
